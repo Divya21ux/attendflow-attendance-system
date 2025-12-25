@@ -1,0 +1,257 @@
+body{
+    background: #d6b9e6;
+    background-size: cover;
+    min-height: 100vh;
+    border: 7px solid #440469;
+    
+    overflow: auto;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    
+    box-sizing: border-box;
+}
+
+nav{
+    background-color: #480e99;
+    padding: 1rem;
+    color: white;
+    border: 5px white;
+    border-radius: 1px;
+    
+    margin-bottom: 0px;
+}
+
+.logo{
+    padding: 0px 2px;
+    width: 40px;
+    background: white;
+    border-radius: 100%
+    
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding:20px 30px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    background: linear-gradient(rgb(102, 4, 115), rgb(32, 32, 133));
+}
+nav ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    gap: 280px;
+}
+
+nav ul li {
+    
+    display: inline;
+}
+
+nav ul li a {
+    
+    display: inline-block;
+    cursor: pointer;
+    background-size: cover;
+    text-decoration: none;
+    color: rgb(242, 236, 236);
+    font-weight: bold;
+    font-size: 1em;
+   
+   
+}
+
+nav ul li a:hover {
+    color: #66dc70;
+    transform: translateX(17px);
+    transition: 1s;
+    
+}    
+
+.overview{
+
+    
+    overflow: hidden;
+    margin: 50px 100px;
+    padding: 0px 0px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: max(1em, 19px);
+    justify-content: center;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: bold;
+    color: rgb(43, 2, 55);
+    
+}
+
+.overview p{
+    margin-bottom: 5px;
+    margin-top: 0px;
+}
+
+.attendance{
+    width: 300px;
+    border-radius: 5px;
+    align-items: end; 
+    margin: 0px 0px;
+    margin-top: 18px;
+}
+
+.Risk-classification {
+    
+
+    display: flex;
+    margin-bottom: 30px;
+
+}
+
+.Risk-classification h2{
+    color:rgb(4, 91, 33);
+    font-weight: bold;
+    margin-bottom: 12px;
+    margin-top:0;
+    font-size: 1.7rem;
+    border: 3px solid rgb(3, 68, 3);
+    padding: 20px 50px;
+    margin: 0px 0px;
+}
+
+
+.Risk-classification h4{
+    text-align: start;
+    margin-top: 15px; 
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.2em;
+    font-family: "Titillium Web", sans-serif;
+    color: #440469;
+    
+}
+
+.Risk-classification h2 h4 ul {
+    text-align: start;
+}
+
+
+.Risk-classification ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    list-style: none;
+}
+
+.Risk-classification ul li{
+    text-align: center;
+    list-style-position: inside;
+    font-family: "Titillium Web", sans-serif;
+    font-style: italic;
+    color:rgb(12, 12, 12);
+    font-size: 1.1rem;
+}
+
+.only-content {
+    text-align: start;
+    margin: 15px 100px; 
+    margin-right: 200px;
+    background: rgb(195, 218, 249);
+    border: 1px solid black;
+    border-style: groove;
+    padding: 30px 80px;
+}
+
+.para2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calendar{
+    width: 700px;
+    
+    margin: 50px 90px;
+}
+
+.p {
+    background:rgb(251, 197, 247);
+    border: 1px solid rgb(203, 35, 150);
+    border-style: groove;
+    font-family: "Titillium Web", sans-serif;
+    color: #440469;
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-right: 100px;
+    padding: 35px 55px;
+}
+
+.button {
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.button h2 {
+    color:rgb(45, 1, 58);
+}
+
+button{
+    margin-top: 30px;
+  margin-left: 650px;
+  margin-bottom: 40px ;
+  scale: 0.5;
+  width: 160px;
+  height: 60px;
+  border-radius: 32px;
+  border: none;
+  background-color: #0c8b0e;
+  font-family: inherit;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover{
+  animation: jello-horizontal 0.9s both;
+  background:rgb(4, 186, 65);
+}
+
+@keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+

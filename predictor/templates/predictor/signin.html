@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Titillium Web", sans-serif;
+        }
+
+        body {
+            background: #d6b9e6;
+            background-image: url("https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExY29nN255ejZrNmhsem5ubXJ4b3Jla2piN3BvampmZXlleWZsZTBkMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Q34Q46x7bUUKJfbn0s/giphy.gif");
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .wrapper {
+            text-align: center;
+            background: linear-gradient(90deg, rgb(102, 4, 115), rgb(32, 32, 133));
+            border: 3px solid white;
+            width: 600px;
+            border-radius: 15px;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+            padding-bottom: 20px;
+        }
+
+        .wrapper h1 {
+            color: white;
+            padding: 20px;
+        }
+
+        .wrapper ul {
+            list-style: none;
+        }
+
+        .wrapper ul li input {
+            padding: 15px 20px;
+            width: 85%;
+            margin: 10px;
+            background: white;
+            font-size: 14px;
+            border-radius: 30px;
+            border: none;
+            outline: none;
+        }
+
+        .wrapper ul li input::placeholder {
+            color: rgb(9, 9, 9);
+        }
+
+        .wrapper ul li input:hover {
+            background: rgb(222, 224, 224);
+        }
+
+        .remember-me {
+            text-align: left;
+            margin-left: 67px;
+            font-size: 17px;
+            color: white;
+        }
+
+        .remember-me label input {
+            accent-color: rgb(143, 143, 248);
+        }
+
+        button {
+            margin: 20px;
+            padding: 12px 40px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            background-color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: rgb(16, 150, 52);
+            color: white;
+            transition: 0.8s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Sign in to your Account</h1>
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <div class="all-inputs">
+                <ul>
+                    <li>
+                        <input type="text" name="username" placeholder="Username" required>
+                    </li>
+                    <li>
+                        <input type="password" name="password" placeholder="Enter Password" required>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="remember-me">
+                <label><input type="checkbox"> Remember me</label>
+            </div>
+
+            <div class="submit-button">
+                <button type="submit">Sign in</button>
+            </div>
+
+            {% if messages %}
+                {% for message in messages %}
+                   <p style="color:white; margin-top:10px;">{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+        </form>
+    </div>
+</body>
+
+</html>
